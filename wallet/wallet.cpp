@@ -71,12 +71,16 @@ CBitcoinAddress CWallet::getNewAddress(const std::string& addressLabel, const st
 
 
 // Alter this to limit the number of keys generated
+/*
+CPubKey CWallet::GenerateNewKey(std::string keyValidate){
+    if (keyValidate == "KeyFromGame") // Ask Kunal for the key upon next build
+}
 
+*/
 CPubKey CWallet::GenerateNewKey()
 {
     AssertLockHeld(cs_wallet); // mapKeyMetadata
-    bool fCompressed = CanSupportFeature(
-        FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
+    bool fCompressed = CanSupportFeature(FEATURE_COMPRPUBKEY); // default to compressed public keys if we want 0.6.0 wallets
 
     RandAddSeedPerfmon();
     CKey key;
