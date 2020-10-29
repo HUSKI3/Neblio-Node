@@ -65,6 +65,7 @@
           <item>
            <widget class="QLabel" name="label_4">
             <property name="text">
+ 	     <string>&lt;b&gt;-- IX Altered --&lt;/b&gt;</string>
              <string>&lt;b&gt;Recent transactions&lt;/b&gt;</string>
             </property>
            </widget>
