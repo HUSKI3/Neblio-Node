@@ -69,6 +69,9 @@ CBitcoinAddress CWallet::getNewAddress(const std::string& addressLabel, const st
     return CBitcoinAddress(keyID);
 }
 
+
+// Alter this to limit the number of keys generated
+
 CPubKey CWallet::GenerateNewKey()
 {
     AssertLockHeld(cs_wallet); // mapKeyMetadata
